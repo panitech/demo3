@@ -36,7 +36,7 @@
      when: ansible_nodename == 'node2'
 
    - name: Append to file
-     ansible.builtin.copy:
+     copy:
        content: 'Website deployed by Ansible'
        dest: /var/www/html/index.html
      when: ansible_nodename == 'node2'
