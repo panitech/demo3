@@ -1,0 +1,6 @@
+- hosts: all
+  become: true
+  tasks:
+     - name: Deploy HTTPD
+       include_role:
+          name: apache

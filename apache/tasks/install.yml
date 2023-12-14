@@ -1,0 +1,4 @@
+   - name: Install HTTPD
+     ansible.builtin.yum:
+       name: "{{ pkg }}"
+       state: latest

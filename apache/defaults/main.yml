@@ -1,0 +1,5 @@
+---
+# defaults file for apache
+pkg: httpd
+src: httpd
+doc: index.html

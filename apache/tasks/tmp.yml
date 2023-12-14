@@ -1,0 +1,5 @@
+   - name: Append to file
+     ansible.builtin.template:
+       src: index.j2
+       dest: /var/www/html/index.html
+     notify: "restart httpd"

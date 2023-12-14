@@ -1,0 +1,16 @@
+---
+# tasks file for apache
+- name: Include install.yml tasks
+  import_tasks: install.yml
+
+- name: Include selinux tasks
+  import_tasks: selinux.yml
+
+- name: Include service tasks
+  import_tasks: service.yml
+
+- name: Include index.yml tasks
+  import_tasks: index.yml
+
+- name: Include tasks
+  import_tasks: tmp.yml
