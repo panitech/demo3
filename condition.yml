@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install httpd
+      yum:
+        name: httpd
+        state: present
+      when: ansible_os_family == "Redhat" or ansible_default_ipv4.address != "192.168.157.185"
+
+    - name: Create file
+      file:
+        path: /home/ansible/condition.txt
+        state: touch
+      when: ansible_hostname != "node3" and ansible_default_ipv4.address == "192.168.157.186"
