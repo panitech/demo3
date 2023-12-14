@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - name: Transfer a template file
+      copy:
+        src: ~/template.j2
+        dest: ~/template
