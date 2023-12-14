@@ -1,0 +1,12 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: Create User Account
+      user:
+        name: "{{ item }}"
+      with_items:
+        - joe
+        - maria
+        - jep
+        - jim
+        - ryan
