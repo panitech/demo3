@@ -4,3 +4,6 @@
       copy:
         src: ~/template.j2
         dest: ~/template
+
+    - name: Run a shell cmd
+      shell: hostnamectl
